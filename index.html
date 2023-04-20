@@ -15,15 +15,20 @@
             <a>
                 <img src="img/logo-index.svg" width="368" height="153" alt="Логотип барбершопа «Бородинский»">
             </a>
-            <ul class="nav-list">
-                <li class="nav-list-item"><a href="blank.html">Информация</a></li>
-                <li class="nav-list-item"><a href="blank.html">Новости</a></li>
-                <li class="nav-list-item"><a href="price.html">Прайс-лист</a></li>
-                <li class="nav-list-item"><a href="catalog.html">Магазин</a></li>
-                <li class="nav-list-item"><a href="blank.html">Контакты</a></li>
-            </ul>
-            <div class="user-navigation">
-                <a class="login-link" href="login.html">Вход</a>
+            <div class="main-nav-wrapper">
+                <div class="container">
+                    <ul class="nav-list">
+                        <li class="nav-list-item"><a href="blank.html">Информация</a></li>
+                        <li class="nav-list-item"><a href="blank.html">Новости</a></li>
+                        <li class="nav-list-item"><a href="price.html">Прайс-лист</a></li>
+                        <li class="nav-list-item"><a href="catalog.html">Магазин</a></li>
+                        <li class="nav-list-item"><a href="blank.html">Контакты</a></li>
+                    </ul>
+                    <div class="user-navigation">
+                        <a class="login-link" href="login.html">Вход</a>
+                    </div>
+
+                </div>
             </div>
         </nav>
     </header>
@@ -45,66 +50,89 @@
                     <p>Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
                 </li class="advantages-list-item">
 
-                <li>
+                <li class="advantages-list-item">
                     <h3>Дорого</h3>
                     <p>Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определенный статус?</p>
                 </li>
             </ul>
         </section>
 
-        <section class="news">
-            <h2>Новости</h2>
-            <ul class="news-list">
-                <li class="news-list-item">
-                    <p>
-                        Нам наконец завезли Ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки
-                    </p>
-                    <time datetime="2023-01-11">11 января</time>
-                </li>
-                
-                <li class="news-list-item">
-                    <p>
-                        В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды
-                    </p>
-                    <time datetime="2023-01-18">18 января</time>
-                </li>
-            </ul>
-            <a class="btn" href="blank.html">Все новости</a>
-        </section>
+        <div class="col">
+            <section class="news">
+                <h2>Новости</h2>
+                <ul class="news-list">
+                    <li class="news-list-item">
+                        <p>
+                            Нам наконец завезли Ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки
+                        </p>
+                        <time datetime="2023-01-11">11 января</time>
+                    </li>
+                    
+                    <li class="news-list-item">
+                        <p>
+                            В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды
+                        </p>
+                        <time datetime="2023-01-18">18 января</time>
+                    </li>
+                </ul>
+                <a class="btn" href="blank.html">Все новости</a>
+            </section>
 
-        <section class="gallery">
-            <h2>Фотогалерея</h2>
-            <figure class="gallery-content">
-                <a href="#">
-                    <img src="img/studio.jpg" width="286" height="164" alt="Интерьер">
-                </a>
-            </figure>
-            <button class="btn gallery-previous" type="button" disabled>Назад</button>
-            <button class="btn gallery-next" type="button">Вперед</button>
-        </section>
+            <section class="gallery">
+                <h2>Фотогалерея</h2>
+                <figure class="gallery-content">
+                    <a href="#">
+                        <img src="img/studio.jpg" width="286" height="164" alt="Интерьер">
+                    </a>
+                </figure>
+                <button class="btn gallery-previous" type="button" disabled>Назад</button>
+                <button class="btn gallery-next" type="button">Вперед</button>
+            </section>
+        </div>
         
-        <section class="contacts">
-            <h2>Контактная информация</h2>
-            <p class="contacts-info">
-                Барбершоп «Бородинский»<br>
-                Адрес: г. Санкт-Петербург, б. Конюшенная, д. 19/8<br>
-                Телефон: <a class="contacts-phone" href="tel:+78126660266">+7 (812) 666-02-66</a>
-            </p>
+        <div class="col">
+            <section class="contacts">
+                <h2>Контактная информация</h2>
+                <p class="contacts-info">
+                    Барбершоп «Бородинский»<br>
+                    Адрес: г. Санкт-Петербург, б. Конюшенная, д. 19/8<br>
+                    Телефон: <a class="contacts-phone" href="tel:+78126660266">+7 (812) 666-02-66</a>
+                </p>
 
-            <p>
-                Время работы:<br>
-                пн-пт: с 10:00 до 22:00<br>
-                сб-вс: с 10:00 до 19:00
-            </p>
-            <a class="btn" href="blank.html">Как проехать</a>
-            <a class="btn" href="blank.html">Обратная связь</a>
-        </section>
+                <p>
+                    Время работы:<br>
+                    пн-пт: с 10:00 до 22:00<br>
+                    сб-вс: с 10:00 до 19:00
+                </p>
+                <a class="btn" href="blank.html">Как проехать</a>
+                <a class="btn" href="blank.html">Обратная связь</a>
+            </section>
 
-        <section class="appointment">
-            <h2>Записаться</h2>
-            <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-            <!-- Форма записи (скоро) -->
-        </section>
+            <section class="appointment">
+                <h2>Записаться</h2>
+                <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+                
+                <form action="/">
+                    <fieldset class="appointment-item">
+                        <label for="appointment-date">Дата</label>
+                        <input type="date" name="date" id="appointment-date" placeholder="24.04.2023">
+                    </fieldset>
+                    <fieldset class="appointment-item">
+                        <label for="appointment-time">Время</label>
+                        <input type="time" name="time" id="appointment-time" placeholder="10:10">
+                    </fieldset>
+                    <fieldset class="appointment-item">
+                        <label for="appointment-name">Ваше имя</label>
+                        <input type="text" name="name" id="appointment-name" placeholder="Борода">
+                    </fieldset>
+                    <fieldset class="appointment-item">
+                        <label for="appointment-phone">Телефон</label>
+                        <input type="tel" name="phone" id="appointment-phone" placeholder="+ 7 000 000-00-00">
+                    </fieldset>
+                </form>
+
+            </section>
+        </div>
     </main>
 
     <footer class="page-footer main-footer">
@@ -122,7 +150,7 @@
                 <h2>Давайте дружить!</h2>
                 <ul>
                     <li>
-                        <a class="social-button" href="#">
+                        <a class="social-btn" href="#">
                         <span class="visually-hidden">Вконтакте</span>
                         <svg width="27" height="16" viewBox="0 0 128 76">
                             <path
@@ -133,7 +161,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="social-button" href="#">
+                        <a class="social-btn" href="#">
                         <span class="visually-hidden">Фейсбук</span>
                         <svg width="19" height="22" viewBox="0 0 10.15 21.74">
                             <path
@@ -144,7 +172,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="social-button" href="#">
+                        <a class="social-btn" href="#">
                         <span class="visually-hidden">Инстаграм</span>
                         <svg width="20" height="20" viewBox="0 0 20 20">
                             <path
@@ -158,7 +186,7 @@
             </section>
             <p class="footer-copyright">
                 <b>Разработано:</b>
-                <a class="button" href="https://github.com/SOSREBET/barber">SOSREBET</a>
+                <a class="btn" href="https://github.com/SOSREBET/barber">SOSREBET</a>
             </p>
         </div>
     </footer>
@@ -199,7 +227,7 @@
                 </label>
                 <a class="restore" href="#">Я забыл пароль!</a>
           </p>
-          <button class="button" type="submit">Войти</button>
+          <button class="btn" type="submit">Войти</button>
         </form>
         <button type="button">Закрыть</button>
       </section>
