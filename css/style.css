@@ -54,7 +54,7 @@ body {
 .inner-page {
     color: var(--black);
     background-color: var(--extra-light);
-    background-image: url('/img/pattern-light.jpg');
+    background-image: url('../img/pattern-light.jpg');
     background-repeat: repeat;
     background-position: 0 0;
 }
@@ -279,8 +279,8 @@ li.nav-list-item a, .login-link {
 .main-footer {
     color: var(--white);
     background-color: var(--gray);
-    background-image: url('/img/pattern-dark.jpg');
-    background-repeat: no-repeat;
+    background-image: url('../img/pattern-dark.jpg');
+    background-repeat: repeat;
     background-position: 0 0;
 }
 
