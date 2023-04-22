@@ -40,12 +40,12 @@ body {
     line-height: 24px;
     text-transform: uppercase;
     color: var(--white);
-
     margin: 0;
     padding: 0;
+    background-color: var(--black);
     background-image: url('../img/Layer.jpg');
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center;
 }
 
 
@@ -302,6 +302,67 @@ li.nav-list-item a, .login-link {
     font-size: 14px;
 }
 
+.footer-btn:hover, .footer-btn:active, .footer-btn:focus {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+
+/* Footer icons */
+
+.social-list {
+    display: inline-block;
+}
+
+.social-list li {
+    width: 43px;
+    height: 43px;
+
+    margin-bottom: 10px;
+}
+
+.social-btn {
+    display: block;
+    background-color: var(--black);
+    width: 100%;
+    height: 100%;
+}
+
+.social-btn:hover, social-btn:active, social-btn:focus {
+    background-color: var(--white);
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.icon:hover, .icon:active, .icon:focus {
+    background-color: var(--black);
+}
+
+.vk-icon {
+    -webkit-mask-image: url('../img/VK.svg');
+    mask-image: url('../img/VK.svg');
+}
+
+.facebook-icon {
+    -webkit-mask-image: url('../img/Facebook.svg');
+    mask-image: url('../img/Facebook.svg');
+
+}
+
+.instagram-icon {
+    -webkit-mask-image: url('../img/Instagram.svg');
+    mask-image: url('../img/Instagram.svg');
+
+}
+
 
 /* Input */
 
@@ -315,8 +376,11 @@ li.nav-list-item a, .login-link {
     width: 200px;
 }
 
-input[type="email"]:focus, .login-form input[type="password"]:focus {
-    border: 2px solid var(--brown);}
+input[type="email"]:focus, .login-form input[type="password"]:focus, .appointment-item input:focus {
+    border-color: var(--brown);
+    border-radius: 0px;
+    outline: none;
+}
 
 
 /* Filter */
@@ -335,6 +399,7 @@ input[type="email"]:focus, .login-form input[type="password"]:focus {
 
 .modal {
     color: var(--black);
+    background-color: var(--white);
 }
 
 .restore {
