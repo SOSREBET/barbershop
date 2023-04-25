@@ -86,11 +86,6 @@ body {
 
 /* Main nav */
 
-.main-header-bar {
-    background-color: var(--black);
-    /* height: 72px; */
-}
-
 .main-nav {
     display: grid;
     font-size: 16px;
@@ -189,10 +184,7 @@ li.nav-list-item a, .login-link {
     font: inherit;
     border: none;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .btn:hover, .btn:active, .btn:focus {
@@ -292,7 +284,8 @@ li.nav-list-item a, .login-link {
 }
 
 .product-price {
-    margin: 0;
+    display: flex;
+    margin: 40px 0 0 0;
 }
 
 .product-price b {
@@ -327,10 +320,23 @@ li.nav-list-item a, .login-link {
 }
 
 
+
+/* Product col */
+
+.product-col {
+    display: grid;
+    grid-template-columns: 460px 390px;
+    column-gap: 89px;
+    margin-top: 53px;
+}
+
+
 /* Product photo and thumbs */
 
 .product-photo-thumbs {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .product-photo-big, .product-photo-thumbs li {
