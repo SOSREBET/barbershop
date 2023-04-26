@@ -94,10 +94,20 @@ body {
     background-color: transparent;
 }
 
+.main-header-bar {
+    background-color: var(--black);
+    height: 72px;
+}
+
 .nav-list {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
+    height: 72px;
 }
 
 .main-nav-wrapper {
@@ -108,20 +118,38 @@ body {
     padding: 0 10px;
 }
 
-li.nav-list-item a, .login-link {
+.nav-list-item {
+    margin-right: 40px;
+}
+
+.nav-list .nav-list-item:last-child {
+    margin-right: 0;
+}
+
+.nav-list-item a, .login-link {
     color: var(--white);
 }
 
 .main-header-logo {
     order: 1;
     justify-self: center;
+    margin-top: 60px;
+}
+
+
+/* User nav */
+
+.user-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 
 /* Advantages */
 
 .advantages {
-    margin-bottom: 70px;
+    margin-top: 78px;
 }
 
 .advantages-list {
@@ -158,6 +186,10 @@ li.nav-list-item a, .login-link {
     background-repeat: no-repeat;
     background-position: center, 0 0;
     margin-bottom: 38px;
+}
+
+.advantages + .col {
+    margin-top: 70px;
 }
 
 .col h2 {
@@ -206,11 +238,81 @@ li.nav-list-item a, .login-link {
 }
 
 
+/* News */
+
+.news {
+    width: 342px;
+    justify-self: center;
+    margin: 47px 0 48px 0;
+}
+
+.news h2 {
+    margin: 0;
+}
+
+.news-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.news-item p {
+    margin: 19px 0 0 0;
+}
+
+
 /* Gallery */
 
+.gallery {
+    width: 300px;
+    justify-self: center;
+    margin: 47px 0 48px 0;
+}
+
+.gallery h2 {
+    margin: 0;
+}
+
 .gallery-content {
+    width: 286px;
+    height: 164px;
+    margin: 26px 0 0 0;
     background-color: var(--dark);
     border: 7px solid var(--white);
+}
+
+
+/* Contacts */
+
+.contacts {
+    width: 321px;
+    justify-self: center;
+    margin: 47px 0 48px 0;
+}
+
+.contacts h2 {
+    margin: 0;
+}
+
+.contacts-info {
+    margin: 19px 0 0 0;
+}
+
+
+/* Appointment */
+
+.appointment {
+    width: 302px;
+    justify-self: center;
+    margin: 47px 0 48px 0;
+}
+
+.appointment h2 {
+    margin: 0
+}
+
+.appointment-info {
+    margin-top: 19px 0 0 0;
 }
 
 
@@ -413,23 +515,24 @@ li.nav-list-item a, .login-link {
     justify-self: center;
 }
 
-.footer-social ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-}
-
 .footer-social h2 {
     font-size: 14px;
     margin-top: 0;
 }
 
+.social-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 .social-list li {
     width: 43px;
     height: 43px;
-
-    margin-bottom: 10px;
 }
 
 .social-btn {
@@ -478,11 +581,18 @@ li.nav-list-item a, .login-link {
 /* Footer copyright */
 
 .footer-copyright {
+    display: flex;
+    flex-direction: column;
     max-width: 150px;
     margin: 0;
     justify-self: end;
+
 }
 
+.footer-btn {
+    margin-top: 12px;
+    padding: 10px 30px 10px 30px;
+}
 
 /* Input */
 
@@ -541,4 +651,23 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
 .restore {
     color: var(--black);
     text-decoration: underline;
+}
+
+
+/* Modal login */
+
+.login-title {
+    margin: 0;
+}
+
+.login-text {
+    margin: 15px 0 0 0;
+}
+
+.login-form p {
+    margin: 0;
+}
+
+.login-form input {
+    margin-top: 10px;
 }

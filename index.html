@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Барбершоп «Бородинский»</title>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -26,7 +28,7 @@
                         <li class="nav-list-item"><a href="blank.html">Контакты</a></li>
                     </ul>
 
-                    <div class="user-navigation">
+                    <div class="user-nav">
                         <a class="login-link" href="login.html">Вход</a>
                     </div>
                 </div>
@@ -62,14 +64,14 @@
             <section class="news">
                 <h2>Новости</h2>
                 <ul class="news-list">
-                    <li class="news-list-item">
+                    <li class="news-item">
                         <p>
                             Нам наконец завезли Ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки
                         </p>
                         <time datetime="2023-01-11">11 января</time>
                     </li>
                     
-                    <li class="news-list-item">
+                    <li class="news-item">
                         <p>
                             В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды
                         </p>
@@ -113,7 +115,7 @@
                 <h2>Записаться</h2>
                 <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
                 
-                <form action="/">
+                <form action="/" class="appointment-form">
                     <p class="appointment-item">
                         <label for="appointment-date">Дата</label>
                         <input type="date" name="date" id="appointment-date" placeholder="08.10.2017">
@@ -178,8 +180,8 @@
     </footer>
   
     <section class="modal">
-        <h2>Личный кабинет</h2>
-        <p>Введите пожалуйста свой логин и пароль</p>
+        <h2 class="login-title">Личный кабинет</h2>
+        <p class="login-text">Введите пожалуйста свой логин и пароль</p>
         <form class="login-form" action="/" method="post">
             <p>
                 <label class="visually-hidden" for="login-login">Логин</label>
