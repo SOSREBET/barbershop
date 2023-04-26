@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог - Барбершоп «Бородинский»</title>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -15,7 +17,7 @@
         <nav class="main-nav container">
             <div class="main-nav-wrapper">
                 <div class="main-header-bar">
-                    <a href="index.html">
+                    <a class="inner-header-logo" href="index.html">
                         <img src="img/logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
                     </a>
                     <ul class="nav-list">
@@ -26,7 +28,7 @@
                         <li class="nav-list-item"><a href="blank.html">Контакты</a></li>
                     </ul>
                 </div>
-                <div class="user-navigation">
+                <div class="user-nav">
                     <a class="login-link" href="login.html">Вход</a>
                 </div>
             </div>
@@ -83,7 +85,7 @@
                 </fieldset>
 
                 <fieldset>
-                        <legend>Группы товаров:</legend>
+                        <legend>Группы&nbspтоваров:</legend>
                         <ul>
                             <li class="filter-option">
                                 <input type="radio" name="product-group" id="filter-filter-shave" value="shaving" class="filter-input">
@@ -208,23 +210,23 @@
         </section>
 
         <ul class="pagination-list">
-            <li class="pagination-list-item"><a class="page-link" href="#">1</a></li>
-            <li class="pagination-list-item"><a class="page-current">2</a></li>
-            <li class="pagination-list-item"><a class="page-link" href="#">3</a></li>
-            <li class="pagination-list-item"><a class="page-link" href="#">4</a></li>
+            <li class="pagination-item"><a class="page-link" href="#">1</a></li>
+            <li class="pagination-item"><a class="page-current">2</a></li>
+            <li class="pagination-item"><a class="page-link" href="#">3</a></li>
+            <li class="pagination-item"><a class="page-link" href="#">4</a></li>
         </ul>
     </main>
 
     <footer class="page-footer main-footer">
         <div class="container">
             <section class="footer-contacts">
-            <h2 class="visually-hidden">Как нас найти</h2>
-            <p>
-                Барбершоп «Бородинский»<br />
-                Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br />
-                <a href="blank.html">Как нас найти?</a><br />
-                Телефон: <a href="tel:+78126660266">+7 (812) 666-02-66</a>
-            </p>
+                <h2 class="visually-hidden">Как нас найти</h2>
+                <p>
+                    Барбершоп «Бородинский»<br />
+                    Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br />
+                    <a href="blank.html">Как нас найти?</a><br />
+                    Телефон: <a href="tel:+78126660266">+7 (812) 666-02-66</a>
+                </p>
             </section>
             <section class="footer-social">
                 <h2>Давайте дружить!</h2>
@@ -257,8 +259,8 @@
     </footer>
   
     <section class="modal">
-        <h2>Личный кабинет</h2>
-        <p>Введите пожалуйста свой логин и пароль</p>
+        <h2 class="login-title">Личный кабинет</h2>
+        <p class="login-text">Введите пожалуйста свой логин и пароль</p>
         <form class="login-form" action="/" method="post">
             <p>
                 <label class="visually-hidden" for="login-login">Логин</label>

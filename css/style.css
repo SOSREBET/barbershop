@@ -77,6 +77,19 @@ body {
     background-color: var(--black);
 }
 
+.inner-page .main-nav {
+    display: block;
+}
+
+.inner-page .main-header-bar {
+    display: flex;
+    align-items: center;
+}
+
+.inner-header-logo {
+    margin-right: 40px;
+}
+
 .container {
     width: 940px;
     margin: 0 auto;
@@ -102,7 +115,7 @@ body {
 .nav-list {
     display: flex;
     flex-direction: row;
-    align-content: center;
+    align-items: center;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
@@ -321,6 +334,7 @@ body {
 .page-title {
     font-size: 30px;
     line-height: 42px;
+    margin: 54px 0 0 0;
 }
 
 
@@ -342,7 +356,7 @@ body {
 
 .breadcrumbs {
     list-style: none;
-    margin: 0;
+    margin: 15px 0 0 0;
     padding: 0;
 }
 
@@ -369,7 +383,7 @@ body {
 
 .catalog-item {
     width: 220px;
-    height: 286px;
+    height: auto;
     background-color: var(--white);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
@@ -419,8 +433,16 @@ body {
     list-style: none;
     margin: 45px 0 0 0;
     padding: 0;
+    display: flex;
 }
 
+.pagination-item {
+    margin-right: 7px;
+}
+
+.pagination-list .pagination-item:last-child {
+    margin-right: 0;
+}
 
 
 /* Product col */
