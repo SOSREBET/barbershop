@@ -87,11 +87,22 @@ body {
 /* Main nav */
 
 .main-nav {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
     line-height: 20px;
     color: var(--white);
     background-color: transparent;
+}
+
+.inner-page .main-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.inner-page .main-nav-wrapper {
+    display: flex;
+    justify-content: start;
 }
 
 .nav-list {
@@ -101,11 +112,10 @@ body {
 }
 
 .main-nav-wrapper {
-    display: grid;
-    grid-template-columns: 1fr min-content;
-    width: 940px;
-    margin: 0 auto;
-    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 li.nav-list-item a, .login-link {
@@ -113,8 +123,8 @@ li.nav-list-item a, .login-link {
 }
 
 .main-header-logo {
-    order: 1;
-    justify-self: center;
+    order: 2;
+    margin: 0 auto;
 }
 
 
@@ -125,16 +135,22 @@ li.nav-list-item a, .login-link {
 }
 
 .advantages-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .advantages-item {
+    width: 300px;
     text-align: center;
+    margin-right: 20px;
+}
+
+.advantages-item:nth-child(3n) {
+    margin-right: 0;
 }
 
 .advantages-item h3 {
@@ -150,8 +166,9 @@ li.nav-list-item a, .login-link {
 /* Col */
 
 .col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
     color: var(--black);
     background-color: var(--white);
     background-image: url('../img/pattern-light.jpg');
@@ -198,7 +215,11 @@ li.nav-list-item a, .login-link {
 }
 
 
-/* Phone */
+/* Contacts */
+
+.contacts {
+    width: 321px;
+}
 
 .contacts-phone {
     color: inherit;
@@ -206,11 +227,42 @@ li.nav-list-item a, .login-link {
 }
 
 
+/* Appointment */
+
+.appointment {
+    width: 302px;
+}
+
+
+/* News */
+
+.news {
+    width: 342px;
+}
+
+.news-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
 /* Gallery */
 
+.gallery {
+    width: 300px 
+}
+
+.gallery h2 {
+    margin: 0;
+}
+
 .gallery-content {
+    width: 286px;
+    height: 164px;
     background-color: var(--dark);
     border: 7px solid var(--white);
+    margin: 26px 0 48px 0;
 }
 
 
@@ -256,8 +308,9 @@ li.nav-list-item a, .login-link {
 /* Catalog list */
 
 .catalog-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap ;
     gap: 20px;
 
     list-style: none;
@@ -267,19 +320,25 @@ li.nav-list-item a, .login-link {
 
 .catalog-item {
     width: 220px;
-    height: 286px;
+    min-height: 286px;
     background-color: var(--white);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 
-/* catalog product */
+/* Catalog product */
 
 .product-title {
     font-size: 14px;
     line-height: 18px;
     text-transform: none;
     color: var(--black);
+    margin: 14px 16px 12px 16px;
+}
+
+.product-image {
+    width: 220px;
+    height: 165px;
     margin: 0;
 }
 
@@ -317,8 +376,11 @@ li.nav-list-item a, .login-link {
     list-style: none;
     margin: 45px 0 0 0;
     padding: 0;
-}
 
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
 
 
 /* Product col */
@@ -541,4 +603,23 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
 .restore {
     color: var(--black);
     text-decoration: underline;
+}
+
+
+/* Login */
+
+.login-form p {
+    margin: 0;
+}
+
+.login-title {
+    margin: 46px 0 0 0;
+}
+
+.login-text {
+    margin: 15px 0 0 0;
+}
+
+.login-form input {
+    margin: 10px 0 0 0;
 }
