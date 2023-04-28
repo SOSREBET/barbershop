@@ -21,11 +21,11 @@
             <div class="main-header-bar">
                 <div class="main-nav-wrapper">
                     <ul class="nav-list">
-                        <li class="nav-list-item"><a href="blank.html">Информация</a></li>
-                        <li class="nav-list-item"><a href="blank.html">Новости</a></li>
-                        <li class="nav-list-item"><a href="price.html">Прайс-лист</a></li>
-                        <li class="nav-list-item"><a href="catalog.html">Магазин</a></li>
-                        <li class="nav-list-item"><a href="blank.html">Контакты</a></li>
+                        <li class="nav-item"><a href="blank.html">Информация</a></li>
+                        <li class="nav-item"><a href="blank.html">Новости</a></li>
+                        <li class="nav-item"><a href="price.html">Прайс-лист</a></li>
+                        <li class="nav-item"><a href="catalog.html">Магазин</a></li>
+                        <li class="nav-item"><a href="blank.html">Контакты</a></li>
                     </ul>
 
                     <div class="user-nav">
@@ -45,16 +45,19 @@
             <ul class="advantages-list">
                 <li class="advantages-item">
                     <h3>Быстро</h3>
+                    <div class="rhombus"></div>
                     <p>Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счаствливый обладатель стильной стрижки-минутки!</p>
                 </li>
 
                 <li class="advantages-item">
                     <h3>Круто</h3>
+                    <div class="rhombus"></div>
                     <p>Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
                 </li>
 
                 <li class="advantages-item">
                     <h3>Дорого</h3>
+                    <div class="rhombus"></div>
                     <p>Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определенный статус?</p>
                 </li>
             </ul>
@@ -107,8 +110,10 @@
                     пн-пт: с 10:00 до 22:00<br>
                     сб-вс: с 10:00 до 19:00
                 </p>
-                <a class="btn" href="blank.html">Как проехать</a>
-                <a class="btn" href="blank.html">Обратная связь</a>
+                <div class="contacts-btns">
+                    <a class="btn" href="blank.html">Как проехать</a>
+                    <a class="btn" href="blank.html">Обратная связь</a>
+                </div>
             </section>
 
             <section class="appointment">
@@ -132,6 +137,7 @@
                         <label for="appointment-phone">Телефон</label>
                         <input type="tel" name="phone" id="appointment-phone" placeholder="+ 7 123 456-78-90">
                     </p>
+                    <button type="submit" class="btn">Отправить</button>
                 </form>
 
             </section>
@@ -155,19 +161,22 @@
                     <li>
                         <a class="social-btn" href="#">
                             <span class="visually-hidden">Вконтакте</span>
-                            <div class="vk-icon icon"></div>
+                            <svg width="27" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m26.79 13.47-.1-.17a13.49 13.49 0 0 0-2.68-2.98c-.4-.35-.77-.73-1.12-1.12a.97.97 0 0 1-.21-1.18c.34-.64.76-1.23 1.24-1.78l.91-1.16c1.62-2.09 2.3-3.41 2.05-3.97l-.1-.13a.82.82 0 0 0-.4-.22c-.3-.06-.6-.06-.9 0H21.5a.44.44 0 0 0-.28 0h-.3a1 1 0 0 0-.3.38 22.97 22.97 0 0 1-1.5 3.06c-.36.55-.67.99-.97 1.46a7 7 0 0 1-1.29 1.36c-.15.11-.28.16-.36.14l-.23-.04a.92.92 0 0 1-.32-.34c-.1-.17-.15-.34-.16-.53V1.61c.02-.2.02-.4 0-.61-.04-.15-.08-.3-.15-.44a.74.74 0 0 0-.28-.34 1.9 1.9 0 0 0-.52-.18 9.94 9.94 0 0 0-1.88 0c-1.12-.1-2.26 0-3.34.31-.2.1-.39.24-.54.41-.17.2-.2.3-.07.33a1.76 1.76 0 0 1 1.23.58l.08.16c.1.2.16.42.2.64a11.77 11.77 0 0 1 .12 2.7c0 .47-.08.83-.12 1.1a2 2 0 0 1-.28.67c-.04.1-.1.2-.16.3l-.08.07c-.12.05-.24.07-.37.07a.97.97 0 0 1-.41-.23C9 7 8.8 6.82 8.63 6.63c-.24-.3-.47-.6-.67-.93-.29-.45-.55-.93-.79-1.42l-.24-.38-.58-1.11a14.2 14.2 0 0 1-.63-1.43.9.9 0 0 0-.34-.44h-.07a.88.88 0 0 0-.19-.16 1.66 1.66 0 0 0-.36-.09L.92.7a1.05 1.05 0 0 0-.8.28H.01a1.48 1.48 0 0 0 .08.59 36.2 36.2 0 0 0 1.84 3.72 43.04 43.04 0 0 0 1.71 2.86c.48.72 1.02 1.4 1.51 2.05.5.65.88 1.07 1.03 1.24l.38.41.34.34a15.14 15.14 0 0 0 2.5 1.7c.58.3 1.2.55 1.84.71.67.2 1.37.3 2.07.28h1.62c.28 0 .54-.1.74-.3v-.07c.05-.08.08-.16.1-.24a2.2 2.2 0 0 0 0-.37c0-.36.03-.7.1-1.06.04-.24.12-.48.23-.7.08-.15.18-.29.3-.4l.23-.2h.12a.94.94 0 0 1 .8.2c.31.23.6.5.84.8.27.3.6.66.97 1.04.3.32.65.62 1.02.87l.29.16c.22.13.47.23.72.3.25.09.52.11.78.07l3.63-.1c.29.02.57-.04.82-.17a.66.66 0 0 0 .35-.37.87.87 0 0 0 0-.45 1.51 1.51 0 0 0-.1-.37l-.08-.05Z" fill="#fff"/></svg>
+                            <!-- <div class="vk-icon icon"></div> -->
                         </a>
                     </li>
                     <li>
                         <a class="social-btn" href="#">
                             <span class="visually-hidden">Фейсбук</span>
-                            <div class="facebook-icon icon"></div>
+                            <svg width="11" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.62 1.13A5.46 5.46 0 0 1 7.1 0H11v3.86H8.47c-.27-.01-.54.07-.75.22-.22.16-.37.37-.43.62v2.58H11c-.09 1.24-.28 2.48-.44 3.72H7.34v11H2.4V11H0V7.3h2.38V3.71c.05-.97.5-1.9 1.24-2.58Z" fill="#fff"/></svg>
+                            <!-- <div class="facebook-icon icon"></div> -->
                         </a>
                     </li>
                     <li>
                         <a class="social-btn" href="#">
                             <span class="visually-hidden">Инстаграм</span>
-                            <div class="instagram-icon icon"></div>
+                            <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-8 6a4 4 0 1 1 0 8 4 4 0 0 1 0-8ZM2.5 18a.47.47 0 0 1-.5-.44V9h2.1a6 6 0 1 0 11.8 0H18v8.5a.47.47 0 0 1-.44.5H2.5ZM18 4.5a.47.47 0 0 1-.44.5H15.5a.47.47 0 0 1-.5-.44V2.5a.47.47 0 0 1 .44-.5h2.06a.47.47 0 0 1 .5.44V4.5Z" fill="#fff"/></svg>
+                            <!-- <div class="instagram-icon icon"></div> -->
                         </a>
                     </li>
                 </ul>

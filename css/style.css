@@ -45,7 +45,7 @@ body {
     background-color: var(--black);
     background-image: url('../img/Layer.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
 }
 
 
@@ -114,9 +114,8 @@ body {
 
 .nav-list {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
-    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -126,21 +125,18 @@ body {
 .main-nav-wrapper {
     display: grid;
     grid-template-columns: 1fr min-content;
-    width: 940px;
+    max-width: 940px;
     margin: 0 auto;
     padding: 0 10px;
 }
 
-.nav-list-item {
-    margin-right: 40px;
-}
-
-.nav-list .nav-list-item:last-child {
-    margin-right: 0;
-}
-
-.nav-list-item a, .login-link {
+.nav-item a, .login-link {
     color: var(--white);
+}
+
+.nav-list a, .user-nav a {
+    display: block;
+    padding: 25px 20px;   
 }
 
 .main-header-logo {
@@ -150,12 +146,28 @@ body {
 }
 
 
-/* User nav */
+/* Login link */
 
-.user-nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
+.login-link::before {
+    content: "";
+    position: absolute;
+    top: 29px;
+    left: 23px;
+    width: 14px;
+    height: 14px;
+    background-image: url('/img/login.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+
+.login-link:hover::before, .login-link:focus::before, .login-link:active::before {
+    opacity: 1;
+}
+
+.user-nav .login-link {
+    padding-left: 50px;
+    position: relative;
 }
 
 
@@ -176,15 +188,27 @@ body {
 
 .advantages-item {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .advantages-item h3 {
     font-size: 30px;
     line-height: 42px;
+    margin: 0;
 }
 
 .advantages-item p {
-    margin: 0 10px;
+    margin: 25px 10px 0 10px;
+}
+
+.rhombus {
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: var(--white);
 }
 
 
@@ -195,8 +219,10 @@ body {
     grid-template-columns: 1fr 1fr;
     color: var(--black);
     background-color: var(--white);
-    background-image: url('../img/pattern-light.jpg');
-    background-repeat: no-repeat;
+    background-image: 
+        url('../img/separator.png'),
+        url('../img/pattern-light.jpg');
+    background-repeat: no-repeat, repeat;
     background-position: center, 0 0;
     margin-bottom: 38px;
 }
@@ -214,7 +240,16 @@ body {
 /* Visually hidden */
 
 .visually-hidden {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 
@@ -228,8 +263,7 @@ body {
     text-transform: uppercase;
     font: inherit;
     border: none;
-
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 10px 30px;
 }
 
 .btn:hover, .btn:active, .btn:focus {
@@ -273,6 +307,13 @@ body {
     margin: 19px 0 0 0;
 }
 
+.news .btn {
+    display: block;
+    box-sizing: border-box;
+    max-width: 140px;
+    margin: 28px 0 0 0;
+}
+
 
 /* Gallery */
 
@@ -280,6 +321,7 @@ body {
     width: 300px;
     justify-self: center;
     margin: 47px 0 48px 0;
+    position: relative;
 }
 
 .gallery h2 {
@@ -292,6 +334,22 @@ body {
     margin: 26px 0 0 0;
     background-color: var(--dark);
     border: 7px solid var(--white);
+}
+
+.gallery .btn {
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 140px;
+    margin: 0;
+}
+
+.gallery-previous {
+    left: 0;
+}
+
+.gallery-next {
+    right: 0;
 }
 
 
@@ -311,6 +369,21 @@ body {
     margin: 19px 0 0 0;
 }
 
+.contacts-btns {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 22px 0 0 0;
+}
+
+.contacts-btns .btn {
+    display: block;
+    box-sizing: border-box;
+}
+
+.contacts-btns .btn:nth-child(1) {
+    margin-right: 20px;
+}
+
 
 /* Appointment */
 
@@ -326,6 +399,33 @@ body {
 
 .appointment-info {
     margin-top: 19px 0 0 0;
+}
+
+.appointment-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.appointment-item {
+    width: 140px;
+    margin: 0 0 10px 0;
+}
+
+p.appointment-item label {
+    display: block;
+    margin: 0 0 9px 15px;
+}
+
+p.appointment-item input {
+    width: 140px;
+    box-sizing: border-box;
+}
+
+.appointment .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0 0 0;
 }
 
 
@@ -575,7 +675,7 @@ body {
 
 .social-list {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
     list-style: none;
     margin: 0;
@@ -589,45 +689,21 @@ body {
 }
 
 .social-btn {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--black);
-    width: 100%;
-    height: 100%;
+    width: 43px;
+    height: 43px;
+    
 }
 
-.social-btn:hover, social-btn:active, social-btn:focus {
+.social-btn:hover, .social-btn:active, .social-btn:focus {
     background-color: var(--white);
 }
 
-.icon {
-    width: 100%;
-    height: 100%;
-    background-color: var(--white);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    mask-position: center;
-}
-
-.icon:hover, .icon:active, .icon:focus {
-    background-color: var(--black);
-}
-
-.vk-icon {
-    -webkit-mask-image: url('../img/VK.svg');
-    mask-image: url('../img/VK.svg');
-}
-
-.facebook-icon {
-    -webkit-mask-image: url('../img/Facebook.svg');
-    mask-image: url('../img/Facebook.svg');
-
-}
-
-.instagram-icon {
-    -webkit-mask-image: url('../img/Instagram.svg');
-    mask-image: url('../img/Instagram.svg');
-
+.social-btn:hover path, .social-btn:active path, .social-btn:focus path {
+    fill: var(--black);
 }
 
 
@@ -655,7 +731,7 @@ body {
     border: 2px solid var(--black);
     background-color: var(--extra-light);
     color: var(--black);
-    padding: 5px 15px 5px 15px;
+    padding: 8px 15px 7px 15px;
     width: 200px;
 }
 
