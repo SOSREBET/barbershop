@@ -145,6 +145,28 @@ body {
     margin-top: 60px;
 }
 
+.nav-item {
+    height: 100%;
+}
+
+.nav-item:hover a, .nav-item:active a, .login-link:hover, .login-link:active {
+    background-color: var(--gray);
+}
+
+.nav-item-current {
+    position: relative;
+}
+
+.nav-item-current::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 4px;
+    bottom: 0px;
+    left: 20px;
+    background-color: var(--white);
+}
+
 
 /* Login link */
 
@@ -168,6 +190,9 @@ body {
 .user-nav .login-link {
     padding-left: 50px;
     position: relative;
+    display: block;
+    box-sizing: border-box;
+    height: 72px
 }
 
 
@@ -455,13 +480,43 @@ p.appointment-item input {
 /* Breadcrumbs */
 
 .breadcrumbs {
+    display: flex;
+    flex-flow: row wrap;
     list-style: none;
     margin: 15px 0 0 0;
     padding: 0;
 }
 
+.breadcrumbs-item {
+    position: relative;
+    margin-right: 40px;
+}
+
+.breadcrumbs-item::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: -24px;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    background-color: var(--black);
+}
+
+.breadcrumbs .breadcrumbs-item:last-child {
+    margin-right: 0;
+}
+
+.breadcrumbs-current::after {
+    display: none;
+}
+
 .breadcrumbs-item a {
     color: var(--black);
+}
+
+.breadcrumbs-item a:hover, .breadcrumbs-item a:active, .breadcrumbs-item a:focus {
+    text-decoration: underline;
 }
 
 .breadcrumbs-current {
@@ -483,46 +538,64 @@ p.appointment-item input {
 
 .catalog-item {
     width: 220px;
-    height: auto;
+    min-height: 285px;
     background-color: var(--white);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
+.catalog-item:hover {
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
 
-/* catalog product */
+
+
+/* Product */
+
+.catalog-item a {
+    display: flex;
+    flex-flow: column nowrap;
+}
 
 .product-title {
+    order: 1;
     font-size: 14px;
     line-height: 18px;
     text-transform: none;
     color: var(--black);
+    margin: 14px 16px 0 16px;
+}
+
+.product-title-group {
+    display: block;
+}
+
+.product-image {
+    width: 220px;
+    height: 165px;
+    background-color: var(--white);
     margin: 0;
+    object-fit: contain;
 }
 
 .product-price {
     display: flex;
-    margin: 40px 0 0 0;
+    margin: 12px 16px 16px 16px;
 }
 
 .product-price b {
+    width: 109px;
+    padding: 13px 25px 11px;
+    font-size: 14px;
+    line-height: 18px;
     background-color: var(--light);
+    box-sizing: border-box;
+    text-align: center;
 }
 
-.page-link {
-    color: var(--white);
-    background-color: var(--black);
-    padding: 13px 18px;
-}
-
-.page-link:hover, .page-link:active, .page-link:focus {
-    background-color: var(--brown);
-}
-
-.page-current {
-    color: var(--black);
-    background-color: var(--white);
-    padding: 18px;
-    padding: 13px 18px;
+.product-price .btn {
+    padding: 13px 18px 11px;
+    margin: 0;
+    line-height: 20px;
 }
 
 
@@ -534,14 +607,31 @@ p.appointment-item input {
     margin: 45px 0 0 0;
     padding: 0;
     display: flex;
+    flex-flow: row wrap;
 }
 
-.pagination-item {
+.pagination-list .pagination-item:not(:last-child) {
     margin-right: 7px;
 }
 
-.pagination-list .pagination-item:last-child {
-    margin-right: 0;
+.page-link {
+    display: block;
+    box-sizing: border-box;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 10px 19px;
+}
+
+.page-link:hover, .page-link:active, .page-link:focus {
+    background-color: var(--brown);
+}
+
+.page-current {
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 19px;
+    color: var(--black);
+    background-color: var(--white);
 }
 
 
@@ -561,7 +651,7 @@ p.appointment-item input {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin: 0;
+    margin: 11px 0 0 0;
     padding: 0;
 }
 
@@ -569,7 +659,6 @@ p.appointment-item input {
     width: 140px;
     height: 149px;
     margin-right: 20px;
-    margin-top: 21px;
 }
 
 .product-photo-thumbs li:nth-child(3n) {
@@ -581,12 +670,20 @@ p.appointment-item input {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
+.product-photo-thumbs li:hover {
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Product sub desc */
 
 .product-sub-desc {
     display: flex;
     justify-content: space-between;
+}
+
+.product-desc .product-price {
+    margin: 40px 0 0 0;
 }
 
 .product-sub-desc p {
@@ -617,6 +714,22 @@ p.appointment-item input {
     list-style: none;
     margin: 25px 0 0 0;
     padding: 0;
+}
+
+.set-item {
+    position: relative;
+    padding-left: 19px;
+}
+
+.set-item::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 2px;
+    width: 7px;
+    height: 7px;
+    background-color: var(--black);
+    transform: rotate(45deg);
 }
 
 
@@ -714,6 +827,7 @@ p.appointment-item input {
     flex-direction: column;
     max-width: 150px;
     margin: 0;
+    text-align: center;
     justify-self: end;
 
 }
@@ -750,13 +864,17 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
 
 .filter ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
 }
 
 .filter legend {
     font-size: 24px;
     line-height: 30px;
+}
+
+.filter label {
+    line-height: 18px;
 }
 
 .filter fieldset {
@@ -769,12 +887,87 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
     margin-bottom: 50px;
 }
 
+.filter-option {
+    margin-bottom: 13px;
+}
+
+.filter-option label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--black);
+}
+
+.filter input[type="checkbox"]:checked + label::after {
+    content: "";
+    position: absolute;
+    left: -33px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    background-image: url('../img/cross.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.filter input[type="checkbox"] + label:hover , .filter input[type="checkbox"]:checked + label {
+    color: var(--brown);
+}
+
+
+
+.filter input[type="radio"] + label::before {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--black);
+    border-radius: 50%;
+}
+
+.filter input[type="radio"]:checked + label::after {
+    content: "";
+    position: absolute;
+    left: -31px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--black);
+    border-radius: 50%;
+}
+
+.filter input[type="radio"] + label:hover , .filter input[type="radio"]:checked + label {
+    color: var(--brown);
+}
+
+.filter input:disabled + label, .filter input:disabled:checked + label {
+    color: var(--black);
+    opacity: 0.3;
+}
+
 
 /* Modal */
 
 .modal {
-    color: var(--black);
-    background-color: var(--white);
+    display: none;
+    color: var(--basic-black);
+    background-color: var(--extra-light);
+    background-image: url('../img/pattern-light.jpg');
+    background-repeat: repeat;
+    background-position: 0 0;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
 .restore {
