@@ -1,0 +1,120 @@
+/* Global */
+
+:root {
+    --accent-color: #8c00ff;
+    --gray: #dddddd;
+    --dark-gray: #acacac;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+}
+
+
+/* Visually hidden */
+
+.visually-hidden {
+    display: none;
+}
+
+
+/* Container */
+
+.container {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+
+/* Filter price */
+
+.filter-price fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-price legend {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* Range controls */
+
+.range-controls {
+    margin-top: 20px;
+    height: 80px;
+    background-color: var(--gray);
+    border-radius: 10px;
+    padding-top: 39px;
+    box-sizing: border-box;
+    /* position: relative; */
+}
+
+.scale-price {
+    width: 80%;
+    height: 2px;
+    background-color: var(--dark-gray);
+    margin-top: 40px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 1px;
+}
+
+.bar-price {
+    width: 70%;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.price-range-controller {
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid var(--white);
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    box-shadow: 0 2px 1px 0 var(--dark-gray);
+    bottom: -9px;
+    cursor: pointer;
+}
+
+.min-price-range {
+    position: absolute;
+    left: calc(0% - 3%);
+}
+
+.max-price-range {
+    position: absolute;
+    left: calc(70% - 5%);
+}
+
+
+/* Price controls */
+
+.price-controls {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+/* Price input */
+
+.price-control {
+    width: 70px;
+    font-size: 16px;
+    background-color: var(--gray);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}

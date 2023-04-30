@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Двойной фильтр</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main class="container">
+        <section class="filter">
+            <h2 class="visually-hidden">Двойной фильтр цены</h2>
+            <form action="/" method="get" class="filter-price">
+                <fieldset>
+                    <legend>Стоимость:</legend>
+                    <div class="range-controls">
+                        <div class="scale-price">
+                            <div class="bar-price"></div>
+                            <div class="price-range-controller min-price-range" tabindex="0"></div>
+                            <div class="price-range-controller max-price-range" tabindex="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="price-controls">
+                        <label for="min-price-range">От
+                            <input type="number" id="min-price-range" value="0" name="min-price" required class="price-control">
+                        </label>
+
+                        <label for="max-price-range">До
+                            <input type="number" id="max-price-range" value="15000" name="max-price" required class="price-control">
+                        </label>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
