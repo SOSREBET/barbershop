@@ -8,6 +8,7 @@
     --light: #e5e5e5;
     --extra-light: #f9f6f3;
     --dark: #aba9a7;
+    --black-50: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -743,6 +744,10 @@ p.appointment-item input {
     background-position: 0 0;
     padding: 60px 0;
     margin-top: 49px;
+}
+
+.inner-page .main-footer {
+    background-image: linear-gradient(to bottom, var(--black-50), transparent), url('../img/pattern-dark.jpg');
 }
 
 .main-footer .container {
