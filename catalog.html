@@ -271,13 +271,14 @@
                 <input class="login-input login-icon-password" id="login-password" type="password" name="password" placeholder="••••••••">
             </p>
             <div class="login-help">
-                <input class="visually-hidden login-checkbox" type="checkbox" name="remember" checked>
-                <label class="login-checkbox-label">Запомните меня</label>
+                <input class="visually-hidden login-checkbox" type="checkbox" name="remember" id="remember-me">
+                <label for="remember-me">Запомните меня</label>
                 <a class="restore" href="#">Я забыл пароль!</a>
             </div>
-            <button class="btn" type="submit">Войти</button>
+            <button class="btn login-submit" type="submit">Войти</button>
         </form>
-        <button type="button">Закрыть</button>
-    </section>    
+        <button type="button" class="modal-close" aria-label="Закрыть"></button>
+    </section>
+    
 </body>
 </html>

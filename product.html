@@ -129,29 +129,26 @@
         </div>
     </footer>
   
-    <section class="modal">
+    <section class="modal modal-login">
         <h2 class="login-title">Личный кабинет</h2>
         <p class="login-text">Введите пожалуйста свой логин и пароль</p>
         <form class="login-form" action="/" method="post">
             <p>
                 <label class="visually-hidden" for="login-login">Логин</label>
-                <input class="login-icon-user" id="login-login" type="email" name="login" placeholder="email@example.com">
+                <input class="login-input login-icon-user" id="login-login" type="email" name="login" placeholder="email@example.com">
             </p>
             <p>
                 <label class="visually-hidden" for="login-password">Пароль</label>
-                <input class="login-icon-password" id="login-password" type="password" name="password" placeholder="••••••••">
+                <input class="login-input login-icon-password" id="login-password" type="password" name="password" placeholder="••••••••">
             </p>
-            <p class="login-help">
-                <label class="login-checkbox">
-                    <input class="visually-hidden" type="checkbox" name="remember">
-                    <span class="checkbox-indicator"></span>
-                    Запомните меня
-                </label>
+            <div class="login-help">
+                <input class="visually-hidden login-checkbox" type="checkbox" name="remember" id="remember-me">
+                <label for="remember-me">Запомните меня</label>
                 <a class="restore" href="#">Я забыл пароль!</a>
-            </p>
-            <button class="btn" type="submit">Войти</button>
+            </div>
+            <button class="btn login-submit" type="submit">Войти</button>
         </form>
-        <button type="button">Закрыть</button>
+        <button type="button" class="modal-close" aria-label="Закрыть"></button>
     </section>
 
 </body>
