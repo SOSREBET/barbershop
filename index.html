@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -185,35 +185,40 @@
         </div>
     </footer>
   
-    <section class="modal">
+    <section class="modal modal-login">
         <h2 class="login-title">Личный кабинет</h2>
         <p class="login-text">Введите пожалуйста свой логин и пароль</p>
         <form class="login-form" action="/" method="post">
             <p>
                 <label class="visually-hidden" for="login-login">Логин</label>
-                <input class="login-icon-user" id="login-login" type="email" name="login" placeholder="email@example.com">
+                <input class="login-input login-icon-user" id="login-login" type="email" name="login" placeholder="email@example.com">
             </p>
             <p>
                 <label class="visually-hidden" for="login-password">Пароль</label>
-                <input class="login-icon-password" id="login-password" type="password" name="password" placeholder="••••••••">
+                <input class="login-input login-icon-password" id="login-password" type="password" name="password" placeholder="••••••••">
             </p>
-            <p class="login-help">
-                <label class="login-checkbox">
-                    <input class="visually-hidden" type="checkbox" name="remember">
-                    <span class="checkbox-indicator"></span>
-                    Запомните меня
-                </label>
+            <div class="login-help">
+                <input class="visually-hidden login-checkbox" type="checkbox" name="remember" id="remember-me">
+                <label for="remember-me">Запомните меня</label>
                 <a class="restore" href="#">Я забыл пароль!</a>
-            </p>
-            <button class="btn" type="submit">Войти</button>
+            </div>
+            <button class="btn login-submit" type="submit">Войти</button>
         </form>
-        <button type="button">Закрыть</button>
+        <button type="button" class="modal-close" aria-label="Закрыть"></button>
     </section>
   
-    <section class="modal">
-        <h2>Как до нас добраться</h2>
-        <!-- Здесь будет карта -->
-        <button type="button">Закрыть</button>
+    <section class="modal modal-map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1064.
+            357121908443!2d40.95134362578391!3d57.75527601919747!2m3!1f0!2f0!3f0!3m2
+            !1i1024!2i768!4f13.1!3m3!1m2!1s0x46ad502794ccb5ab%3A0x5254893fbc8338d0!2
+            z0JrQvtGB0YLRgNC-0LzRgdC60L7QuSDRgtC10YXQvdC-0LvQvtCz0LjRh9C10YHQutC40Lk
+            g0YLQtdGF0L3QuNC60YPQvCDQuNC8LiDQkdC10LHRgNC40LrQvtCy0LA!5e0!3m2!1sru!2s
+            ru!4v1683020959694!5m2!1sru!2sru" 
+            title="Костромской технологический техникум по адресу ул. Лагерная 17, Кострома"
+            width="766" height="560" allowfullscreen loading="lazy">
+        </iframe>
+        <button type="button" class="modal-close" aria-label="Закрыть"></button>
     </section>
     
 </body>
