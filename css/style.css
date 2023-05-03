@@ -480,7 +480,7 @@ p.appointment-item input {
 .page-title {
     font-size: 30px;
     line-height: 42px;
-    margin: 51px 0 0 0;
+    margin: 55px 0 0 0;
 }
 
 
@@ -990,6 +990,128 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
 }
 
 
+/* Inner content */
+
+.inner-content {
+    margin: 35px 0 75px 0;
+}
+
+.inner-content h3 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 29px;
+}
+
+
+/* Big heading */
+
+.big-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 48px;
+    line-height: 48px;
+}
+
+.big-heading::before, .big-heading::after {
+    content: "";
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 2px;
+    background-color: var(--black);
+}
+
+.big-heading::before {
+    margin-right: 25px;
+}
+
+.big-heading::after {
+    margin-left: 25px;
+}
+
+
+/* Inner col */
+
+.inner-col {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 59px 0;
+}
+
+.inner-col > h3:first-child {
+    margin-top: 0;
+    width: 100%;
+}
+
+.inner-col-left, .inner-col-right {
+    width: 460px;
+}
+
+.inner-col-left *:first-child, .inner-col-right *:first-child {
+    margin-top: 0;
+}
+
+.inner-col-left *:last-child, .inner-col-right *:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Custom list */
+
+.custom-list {
+    list-style: none;
+    margin: 14px 0;
+    padding: 0;
+}
+
+.custom-list li::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--black);
+    transform: rotate(45deg);
+}
+
+.custom-list li {
+    position: relative;
+    margin-bottom: 13px;
+    padding-left: 20px;
+}
+
+
+/* Price table */
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 36px;
+}
+
+.price-table td {
+    width: 50%;
+    padding: 7px 20px 8px 18px;
+    border: 2px solid var(--black);
+    background-color: var(--extra-light);
+}
+
+.price-table td:last-child {
+    text-align: center;
+}
+
+
+/* About-p */
+
+.about-p {
+    max-width: 385px;
+    margin: 0;
+}
+
+
 /* Modal */
 
 .modal {
@@ -1156,3 +1278,10 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
 .modal-map iframe {
     border: none;
 }
+
+
+/* План:
+- Рефакторинг динамического контента
+- Фикс шапки внутренних страниц
+- Полный чек через PP 
+- Продолжить лецию */
