@@ -90,7 +90,8 @@ body {
 }
 
 .inner-header-logo {
-    margin-right: 40px;
+    margin-left: 10px;
+    margin-right: 20px;
 }
 
 .container {
@@ -133,11 +134,11 @@ body {
     padding: 0 10px;
 }
 
-.nav-item a, .login-link {
+.nav-list a, .login-link {
     color: var(--white);
 }
 
-.nav-list a, .user-nav a {
+.nav-list a {
     display: block;
     padding: 25px 20px;   
 }
@@ -148,11 +149,11 @@ body {
     margin-top: 60px;
 }
 
-.nav-item {
+.nav-list li {
     height: 100%;
 }
 
-.nav-item:hover a, .nav-item:active a, .login-link:hover, .login-link:active {
+.nav-list a:hover, .nav-list a:active, .login-link:hover, .login-link:active {
     background-color: var(--gray);
 }
 
@@ -177,7 +178,7 @@ body {
     content: "";
     position: absolute;
     top: 29px;
-    left: 23px;
+    left: -7px;
     width: 14px;
     height: 14px;
     background-image: url('/img/login.svg');
@@ -191,11 +192,11 @@ body {
 }
 
 .user-nav .login-link {
-    padding-left: 50px;
     position: relative;
     display: block;
     box-sizing: border-box;
-    height: 72px
+    height: 72px;
+    padding: 25px 23px 25px 20px;
 }
 
 
@@ -318,9 +319,9 @@ main .col:last-child {
 }
 
 
-/* Phone */
+/* Contacts link */
 
-.contacts-phone {
+.contacts-info a {
     color: inherit;
     text-decoration: underline;
 }
@@ -443,7 +444,7 @@ time {
     margin: 0
 }
 
-.appointment-info {
+.appointment > p {
     margin: 19px 0 12px 0;
 }
 
@@ -453,17 +454,17 @@ time {
     justify-content: space-between;
 }
 
-.appointment-item {
+.appointment-form p {
     width: 140px;
     margin: 0 0 10px 0;
 }
 
-p.appointment-item label {
+.appointment-form label {
     display: block;
     margin: 0 0 7px 19px;
 }
 
-p.appointment-item input {
+.appointment-form input {
     width: 140px;
     box-sizing: border-box;
 }
@@ -495,6 +496,10 @@ p.appointment-item input {
 .page-catalog-info {
     grid-column-start: span 2;
     margin-bottom: 45px;
+}
+
+.page-catalog-info .page-title {
+    margin-top: 51px;
 }
 
 
@@ -557,14 +562,14 @@ p.appointment-item input {
     padding: 0;
 }
 
-.catalog-item {
+.catalog-list li {
     width: 220px;
     min-height: 285px;
     background-color: var(--white);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
-.catalog-item:hover {
+.catalog-list li:hover {
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -572,7 +577,7 @@ p.appointment-item input {
 
 /* Product */
 
-.catalog-item a {
+.catalog-list a {
     display: flex;
     flex-flow: column nowrap;
 }
@@ -666,7 +671,7 @@ p.appointment-item input {
     display: grid;
     grid-template-columns: 460px 390px;
     column-gap: 89px;
-    margin: 53px 0 55px 0;
+    margin: 53px 0 51px 0;
 }
 
 
@@ -690,7 +695,7 @@ p.appointment-item input {
     margin-right: 0;
 }
 
-.product-photo-big, .product-photo-thumbs li {
+.product-photos img {
     background-color: var(--white);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
@@ -712,7 +717,7 @@ p.appointment-item input {
 }
 
 .product-info .product-price {
-    margin: 40px 0 0 0;
+    margin: 34px 0 0 0;
 }
 
 .product-sub-desc p {
@@ -745,12 +750,12 @@ p.appointment-item input {
     padding: 0;
 }
 
-.set-item {
+.set-list li {
     position: relative;
     padding-left: 19px;
 }
 
-.set-item::before {
+.set-list li::before {
     content: "";
     position: absolute;
     top: 9px;
@@ -835,7 +840,7 @@ p.appointment-item input {
     margin-bottom: 7px;
 }
 
-.social-btn {
+/* .social-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -850,6 +855,24 @@ p.appointment-item input {
 }
 
 .social-btn:hover path, .social-btn:active path, .social-btn:focus path {
+    fill: var(--black);
+} */
+
+.social-list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    width: 43px;
+    height: 43px;
+    
+}
+
+.social-list a:hover, .social-list a:active, .social-list a:focus {
+    background-color: var(--white);
+}
+
+.social-list a:hover path, .social-list a:active path, .social-list a:focus path {
     fill: var(--black);
 }
 
@@ -873,7 +896,7 @@ p.appointment-item input {
 
 /* Input */
 
-.login-form input[type="email"], .login-form input[type="password"], .appointment-item input {
+.login-form input[type="email"], .login-form input[type="password"], .appointment-form input {
     font: inherit;
     text-transform: uppercase;
     border: 2px solid var(--black);
@@ -882,7 +905,7 @@ p.appointment-item input {
     padding: 8px 15px 7px 15px;
 }
 
-input[type="email"]:focus, .login-form input[type="password"]:focus, .appointment-item input:focus {
+input[type="email"]:focus, .login-form input[type="password"]:focus, .appointment-form input:focus {
     border-color: var(--brown);
     border-radius: 0px;
     outline: none;
@@ -1104,9 +1127,9 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
 }
 
 
-/* About-p */
+/* Price p */
 
-.about-p {
+.inner-col p {
     max-width: 385px;
     margin: 0;
 }
@@ -1278,10 +1301,3 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
 .modal-map iframe {
     border: none;
 }
-
-
-/* План:
-- Рефакторинг динамического контента
-- Фикс шапки внутренних страниц
-- Полный чек через PP 
-- Продолжить лецию */
