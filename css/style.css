@@ -92,6 +92,9 @@ body {
 .inner-header-logo {
     margin-left: 10px;
     margin-right: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .container {
@@ -153,7 +156,7 @@ body {
     height: 100%;
 }
 
-.nav-list a:hover, .nav-list a:active, .login-link:hover, .login-link:active {
+.nav-list a:hover, .nav-list a:active, .nav-list a:focus, .login-link:hover, .login-link:active, .login-link:focus {
     background-color: var(--gray);
 }
 
@@ -379,6 +382,11 @@ time {
     margin: 26px 0 0 0;
     background-color: var(--dark);
     border: 7px solid var(--white);
+}
+
+.gallery-content a {
+    display: block;
+    height: 100%;
 }
 
 .gallery .btn {
@@ -840,24 +848,6 @@ time {
     margin-bottom: 7px;
 }
 
-/* .social-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--black);
-    width: 43px;
-    height: 43px;
-    
-}
-
-.social-btn:hover, .social-btn:active, .social-btn:focus {
-    background-color: var(--white);
-}
-
-.social-btn:hover path, .social-btn:active path, .social-btn:focus path {
-    fill: var(--black);
-} */
-
 .social-list a {
     display: flex;
     justify-content: center;
@@ -979,8 +969,6 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
     color: var(--brown);
 }
 
-
-
 .filter-radio + label::before {
     content: "";
     position: absolute;
@@ -1010,6 +998,11 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
 .filter-input:disabled + label, .filter-input:disabled:checked + label {
     color: var(--black);
     opacity: 0.3;
+}
+
+.filter-input:focus + label::before {
+    outline: 2px solid var(--brown);
+    outline-offset: 4px
 }
 
 
@@ -1186,12 +1179,15 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
     transform: rotate(-45deg);
 }
 
+section.modal-show {
+    display: block;
+}
+
 
 /* Modal login */
 
 .modal-login {
     display: none;
-
     top: 120px;
     bottom: auto;
     width: 300px;
@@ -1260,7 +1256,6 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
     border: 2px solid var(--black);
 }
 
-
 .login-checkbox:checked + label::after {
     content: "";
     position: absolute;
@@ -1280,6 +1275,11 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
 .login-checkbox:disabled + label, .login-checkbox:disabled:checked + label {
     color: var(--black);
     opacity: 0.3;
+}
+
+.login-checkbox:focus + label::before {
+    outline: 2px solid var(--brown);
+    outline-offset: 4px;
 }
 
 .login-submit {
