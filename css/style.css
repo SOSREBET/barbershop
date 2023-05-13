@@ -14,17 +14,6 @@
 }
 
 
-/* Font */
-
-/* @font-face {
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-style: normal;
-    src: local('PT Sans Narrow'), local('PTSans-Narrow'),
-        url('../fonts/PTSansNarrow-Regular.ttf') format('ttf'),
-        url('../fonts/PTSansNarrow-Bold.ttf') format('ttf');
-} */
-
-
 /* Global */
 
 a {
@@ -184,7 +173,7 @@ body {
     left: 24px;
     width: 14px;
     height: 14px;
-    background-image: url('/img/login.svg');
+    background-image: url('../img/login.svg');
     background-repeat: no-repeat;
     background-position: 0 0;
     opacity: 0.3;
