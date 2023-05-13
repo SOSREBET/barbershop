@@ -181,7 +181,7 @@ body {
     content: "";
     position: absolute;
     top: 29px;
-    left: -7px;
+    left: 24px;
     width: 14px;
     height: 14px;
     background-image: url('/img/login.svg');
@@ -199,9 +199,8 @@ body {
     display: block;
     box-sizing: border-box;
     height: 72px;
-    padding: 25px 23px 25px 20px;
+    padding: 25px 23px 25px 53px;
 }
-
 
 /* Advantages */
 
@@ -888,11 +887,17 @@ time {
 
 .login-form input[type="email"], .login-form input[type="password"], .appointment-form input {
     font: inherit;
-    text-transform: uppercase;
+    text-transform: none;
     border: 2px solid var(--black);
     background-color: var(--extra-light);
     color: var(--black);
     padding: 8px 15px 7px 15px;
+}
+
+.login-form input[type="email"]::placeholder, 
+.login-form input[type="password"]::placeholder, 
+.appointment-form input::placeholder {
+    text-transform: uppercase;
 }
 
 input[type="email"]:focus, .login-form input[type="password"]:focus, .appointment-form input:focus {
@@ -1000,7 +1005,7 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
     opacity: 0.3;
 }
 
-.filter-input:focus + label::before {
+.filter-input:focus-visible + label::before {
     outline: 2px solid var(--brown);
     outline-offset: 4px
 }
@@ -1181,6 +1186,18 @@ input[type="email"]:focus, .login-form input[type="password"]:focus, .appointmen
 
 section.modal-show {
     display: block;
+    animation-name: bounce-in;
+    animation-duration: 0.6s;
+}
+
+section.modal-hide {
+    animation-name: bounce-out;
+    animation-duration: 0.6s;
+}
+
+section.modal-error {
+    animation-name: shake;
+    animation-duration: 0.6s;
 }
 
 
@@ -1277,7 +1294,7 @@ section.modal-show {
     opacity: 0.3;
 }
 
-.login-checkbox:focus + label::before {
+.login-checkbox:focus-visible + label::before {
     outline: 2px solid var(--brown);
     outline-offset: 4px;
 }
@@ -1300,4 +1317,26 @@ section.modal-show {
 
 .modal-map iframe {
     border: none;
+}
+
+
+/* Keyframes */
+
+@keyframes bounce-in {
+    0% {transform: translateY(-2000px);}
+    70% {transform: translateY(30px);}
+    90% {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
+}
+
+@keyframes bounce-out {
+    0% {transform: translateY(-10px);}
+    70% {transform: translateY(30px);}
+    90% {transform: translateY(-2000px);}
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {transform: translateX(10px);}
 }
