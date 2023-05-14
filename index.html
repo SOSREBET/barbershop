@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -123,19 +123,19 @@
                 <form action="/" class="appointment-form">
                     <p>
                         <label for="appointment-date">Дата</label>
-                        <input type="text" name="date" id="appointment-date" placeholder="08.10.2017">
+                        <input type="text" name="date" id="appointment-date" placeholder="08.10.2017" required>
                     </p>
                     <p>
                         <label for="appointment-time">Время</label>
-                        <input type="text" name="time" id="appointment-time" placeholder="10:00">
+                        <input type="text" name="time" id="appointment-time" placeholder="10:00" required>
                     </p>
                     <p>
                         <label for="appointment-name">Ваше имя</label>
-                        <input type="text" name="name" id="appointment-name" placeholder="Борода">
+                        <input type="text" name="name" id="appointment-name" placeholder="Борода" required>
                     </p>
                     <p>
                         <label for="appointment-phone">Телефон</label>
-                        <input type="tel" name="phone" id="appointment-phone" placeholder="+ 7 123 456-78-90">
+                        <input type="tel" name="phone" id="appointment-phone" placeholder="+ 7 123 456-78-90" required>
                     </p>
                     <button type="submit" class="btn">Отправить</button>
                 </form>
@@ -223,7 +223,7 @@
         </iframe>
         <button type="button" class="modal-close" aria-label="Закрыть"></button>
     </section>
-    <script src="js/popup_login.js"></script>
-    <script src="js/popup_map.js"></script>
+    <script src="js/popup_login.min.js"></script>
+    <script src="js/popup_map.min.js"></script>
 </body>
 </html>
