@@ -1,0 +1,89 @@
+English:
+
+Technical task
+
+1. General technical requirements
+1.1. Layout standards: HTML, CSS, progressive enhancement.
+1.2. Grid: defined in the layout.
+1.3. Layout adaptability: no.
+1.4. Frameworks used: none.
+1.5. Crossbrowser: Chrome, Firefox, Safari.
+1.6. Typography: Partially defined in the layout, others are up to the developer.
+1.7. Font used: PT Sans Narrow (available in the project folder and on Google Fonts).
+1.8. A style guide is provided with the layout, containing the drawing of the states of the interface elements. For any discrepancies with layouts, it must have
+highest priority.
+
+All layouts:
+2.1. The content area is centered and cannot be narrower than the layout width. Backgrounds that rest against the edges of the layout should extend to the entire page.
+2.2. By clicking on the "login" link, a modal authorization window opens.
+2.3. In the breadcrumb block, the active page (last item) is not a link and does not respond to hover.
+2.4. In pagination, the active page is not a link and does not respond to hover.
+2.5. Bottom of the page: consider adding another social button.
+2.6. All buttons are black at rest and change background color on hover - see the styleguide page.
+
+index:
+3.1. The logo is not a link.
+3.2. News can be more than two.
+3.3. Pictures in the photo gallery are a link, a modal window with a photo opens on click (there is no layout, do not do it).
+
+Price:
+3.4. Adding text to content blocks should not break the page.
+
+shop:
+3.5. The filter (blocks "Manufacturers" and "Groups of goods") to typeset using the form, the button "Show" is responsible for submitting the form.
+3.6. The number of products in the right block can be any, it should not break the page.
+3.7. Product card: The product image is a link to the product page.
+3.8. Product card: the product name is a link to the product page (the name consists of two lines, but in fact it is one block).
+3.9. Product card: "Buy" button - by clicking the product is added to the basket (there is no basket layout, do not do it).
+
+Item:
+3.10. When clicking on a thumbnail in the image gallery, the large photo should not change.
+
+
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+
+
+
+Russian:
+
+Техническое задание
+
+1. Общие технические требования
+1.1. Стандарты вёрстки: HTML, CSS, прогрессивное улучшение.
+1.2. Сетка: определена в макете.
+1.3. Адаптивность вёрстки: нет.
+1.4. Используемые фреймворки: нет.
+1.5. Кроссбраузерность: Chrome, Firefox, Safari.
+1.6. Типографика: частично определена в макете, прочее — на усмотрение разработчика.
+1.7. Используемый шрифт: PT Sans Narrow (есть в папке проекта и на Google Fonts).
+1.8. С макетом предоставлен стайлгайд, содержащий прорисовку состояний элементов интерфейса. При любых расхождениях с макетами он должен иметь
+наивысший приоритет.
+
+Все макеты:
+2.1. Контентная область центрируется и не может быть уже макетной ширины. Фоны, которые упираются в края макета должны тянуться на всю страницу.
+2.2. По клику на ссылку «вход» открывается модальное окно авторизации.
+2.3. В блоке с хлебными крошками активная страница (последний пункт) не является ссылкой и не реагирует на наведение.
+2.4. В пагинации активная страница не является ссылкой и не реагирует на наведение.
+2.5. Нижняя часть страницы: предусмотрите появление ещё одной социальной кнопки.
+2.6. Все кнопки в покое чёрные, по наведению меняют фоновый цвет — смотрите страницу styleguide.
+
+Index:
+3.1. Логотип не является ссылкой.
+3.2. Новостей может быть больше двух.
+3.3. Картинки в фотогалерее — это ссылка, по клику открывается модальное окно с фотографией (макета нет, не делать).
+
+Price:
+3.4. Добавление текста в контентные блоки не должно ломать страницу.
+
+Shop:
+3.5. Фильтр (блоки «Производители» и «Группы товаров») верстать с помощью формы, кнопка «Показать» отвечает за отправку формы.
+3.6. Количество товаров в правом блоке может быть любым, оно не должно ломать страницу.
+3.7. Карточка товара: изображение товара — это ссылка на страницу товара.
+3.8. Карточка товара: название товара — это ссылка на страницу товара (название состоит из двух строк, но по сути является одним блоком).
+3.9. Карточка товара: кнопка «Купить» — по клику товар добавляется в корзину (макета корзины нет, не делать).
+
+Item:
+3.10. При клике по миниатюре в галерее изображений большая фотография меняться не должна.
